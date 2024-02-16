@@ -1,0 +1,7 @@
+ const nonceData = `Welcome to VIP3!\n\nClick \"Sign\" to sign in and accept the VIP3 Terms of Use(https://vip3.gitbook.io/term-of-use/).\n\nThis request will not trigger a blockchain transaction or cost any gas fees.\n
+                 \nWallet address:\n${walletAddress}\n\nNonce: ${await randstr(13)} `;
+                 const signatureResult = await wallet.signMessage(nonceData);
+                 const tokenresult = await logindangettoken(walletAddress,nonceData,signatureResult);
+                 console.log(tokenresult)
+                 const authcuy='Bearer '+ tokenresult.data.token
+                 console.log(authcuy)
